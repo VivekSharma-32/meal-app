@@ -10,7 +10,7 @@ async function fetchMealsFromApi(url, value) {
   return meals;
 }
 
-// its show's all meals card in main acording to search input value
+// Function to display the meals in a card when user search for a meal.
 function showMealList() {
   let inputValue = document.getElementById("my-search").value;
   let arr = JSON.parse(localStorage.getItem("favouritesList"));
@@ -160,7 +160,7 @@ function addRemoveToFavList(id) {
     alert("You have removed meal from your favourite list.");
   } else {
     arr.push(id);
-    alert("You have successfully added meal to your favourite list.s");
+    alert("You have successfully added meal to your favourite list.");
   }
   localStorage.setItem("favouritesList", JSON.stringify(arr));
   showMealList();
